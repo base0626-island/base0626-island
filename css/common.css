@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=M+PLUS+1+Code:wght@100;200;300;400;500;600;700&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=RocknRoll+One&family=Stick&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
+:root {
+  font-family: "Klee One", cursive;
+  font-family: "M PLUS 1", sans-serif;
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-family: "RocknRoll One", sans-serif;
+  font-family: "Stick", sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+
+  scroll-behavior: smooth;
+  --font-nekton: "Stick", sans-serif;
+  --font-title: "RocknRoll One", sans-serif;
+  --font-moji: "M PLUS 1, sans-serif", cursive;
+  --header-color: #fff;
+  --headerbg-color: #f4fdeff2;
+  --headerhover-color: rgb(41, 101, 255);
+  --mainbg-color: rgb(251, 252, 234);
+  --footerbg-color: rgb(59, 65, 62);
+  --footerfont-color: #fff;
+  --accessbg-color: rgb(155, 238, 1);
+  --boder-footer: 2px solid rgba(227, 231, 240, 0.7);
+  --menubutton-color: #00c29e;
+  --menuactive-color: #eefffc;
+  --menuactivefont-color: #029d80;
+  --menubutton2-color: #323f5e;
+  --menuactive2-color: #6b86c4a5;
+  --button-shadow: 3px 3px 2px 1px rgba(214, 253, 255, 0.982);
+}
+/* body */
+body {
+  color: #333;
+  font-size: 20px;
+  font-family: "M PLUS 1", YuGothic, sans-serif;
+  background-color: rgb(255, 255, 255);
+  line-height: 1.8;
+}
+/* リンク文字の書式設定 */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* ヘッダー */
+header {
+  font-family: var(--font-nekton);
+  font-size: 20px;
+  color: #fff;
+  background-color: var(--headerbg-color);
+  /* ------1------ */
+  border-bottom: 1px solid rgba(214, 255, 255, 0.449);
+  text-align: center;
+  padding-bottom: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  /* ------------ */
+}
+.container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+header div.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header p.logo {
+  flex-basis: 150px;
+  margin: 0;
+  padding: 0;
+}
+header div.migi {
+  flex-basis: 885px;
+}
+header div.nav_button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+header div.nav_button h1 {
+  max-width: 180px;
+  margin: 1px 0 0 0;
+}
+header div.nav_button p {
+  margin-bottom: 5px;
+  padding: 0 20px 0 20px;
+  background-color: var(--accessbg-color);
+  box-shadow: var(--button-shadow);
+}
+header div.nav_button p a {
+  display: block;
+}
+/* メニューリンク文字ホバー */
+div.nav_button a:hover {
+  font-weight: bold;
+  /* text-decoration: underline; */
+  opacity: 0.7;
+  color: var(--headerhover-color);
+}
+nav.nav_button li.active a {
+  font-weight: bold;
+  color: var(--menuactivefont-color);
+  cursor: default;
+}
+
+nav li a:hover {
+  font-weight: bold;
+  /* text-decoration: underline; */
+  opacity: 0.7;
+  background-color: var(--menuactive-color);
+  color: var(--headerhover-color);
+  /* font-size: 21px; */
+}
+/* 選択時の書式 */
+nav li.active {
+  font-weight: bold;
+  background-color: var(--menuactive-color);
+  color: var(--menuactivefont-color);
+  cursor: default;
+}
+nav li.active a {
+  font-weight: bold;
+  background-color: var(--menuactive-color);
+  color: var(--menuactivefont-color);
+  cursor: default;
+}
+nav li p.active {
+  font-weight: bold;
+  background-color: var(--menuactive-color);
+  color: var(--menuactivefont-color);
+  cursor: default;
+}
+header div.nav_button p:hover {
+  background-color: var(--headerbg-color);
+}
+header div div nav {
+  z-index: 2;
+  margin: 0px 0 5px 0;
+}
+header div div nav ul {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+header div div nav li {
+  padding: 2px 5px;
+  display: block;
+  flex: 1;
+}
+header div div nav li.access {
+  display: none;
+}
+header div div nav li.img_close {
+  display: none;
+}
+header div div nav li a {
+  box-shadow: var(--button-shadow);
+  background-color: var(--menubutton-color);
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+/* パンくずリスト */
+#topicpath {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+#topicpath ol {
+  list-style-type: none;
+  margin-left: 40px;
+  padding: 0;
+  padding: 0;
+  text-align: left;
+}
+#topicpath ol li {
+  display: inline;
+  margin-right: 5px;
+}
+#topicpath ol li a {
+  padding-right: 8px;
+}
+
+/* スマホメニュー用アイコン */
+.hmenu {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: var(--menubutton-color);
+  /* ---display: flex; ではなく*/
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+/* 幅:35px, 高さ:4px, 背景色:#fff, 角丸:4px, ブロック表示, 配置:absolute, 切り替え:0.5s */
+.hmenu span,
+.hmenu span::before,
+.hmenu span::after {
+  width: 35px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+/* 内容:"", 下:12px */
+.hmenu span::before {
+  content: "";
+  bottom: 12px;
+}
+/* 内容:"", 上:12px */
+.hmenu span::after {
+  content: "";
+  top: 12px;
+}
+/* 背景色:unset */
+.hmenu.close span {
+  background-color: unset;
+}
+/* 下:0, 回転:-45° */
+.hmenu.close span::before {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+/* 上:0, 回転:45° */
+.hmenu.close span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+/* スライダー */
+#top {
+  position: relative;
+}
+#top p.slid {
+  text-align: center;
+  width: 100%;
+  font-size: 55px;
+  font-family: var(--font-nekton);
+  text-shadow: 0 0 3px #ffffff, 0 0 0px #ffffff, 0 0 5px #00e563, 0 0 5px #07eaee, 0 0 5px #50fc9b, 0 0 5px #0d0dbb, 0 0 5px #f8ff37;
+  color: #ffffff;
+  margin-top: -150px;
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* ------ メイン ------ */
+main {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8px;
+}
+main article {
+  background: rgba(246, 253, 255, 0.7);
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main article h1 {
+  text-align: center;
+  font-size: 40px;
+}
+main article section.one h2 {
+  text-align: center;
+  color: #0038ca;
+  text-align: center;
+  text-shadow: 5px 5px 2px rgba(59, 117, 107, 0.8);
+  font-family: M PLUS 1 Code;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/* --ページトップボタン-- */
+p.pagetop {
+  position: fixed;
+  right: 22px;
+  bottom: 20px;
+  display: none;
+}
+p.pagetop a {
+  opacity: 0.5;
+}
+/* ホバー設定 */
+p.pagetop a:hover {
+  opacity: 1;
+}
+
+/* フッター */
+footer {
+  font-size: 12px;
+  background-color: #333333;
+  color: var(--footerfont-color);
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 62px;
+  line-height: 30px;
+}
+footer nav h2 {
+  background-color: var(--footerbg-color);
+  align-items: center;
+  flex-basis: 100px;
+}
+footer nav h2:hover {
+  opacity: 0.3;
+}
+footer nav ul {
+  flex-wrap: wrap;
+  gap: 9px 2%;
+  display: flex;
+  flex-basis: 475px;
+}
+footer nav li {
+  flex-basis: 23.5%;
+  /* padding: 3px; */
+}
+footer nav li.active {
+  font-weight: bold;
+  background-color: var(--menuactive-color);
+  color: var(--menuactivefont-color);
+  cursor: default;
+  opacity: 0.5;
+}
+footer nav li:hover {
+  font-size: 15px;
+  font-weight: bold;
+  /* opacity: 0.7; */
+  background-color: var(--menuactive-color);
+  color: var(--headerhover-color);
+}
+footer nav li a {
+  display: block;
+  background-color: var(--menubutton2-color);
+  border: var(--boder-footer);
+}
+/* 著作権 */
+footer p.copyright {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  header div.nav_button p {
+    display: none;
+  }
+  /* menuアイコン */
+  .hmenu {
+    display: flex;
+  }
+  nav {
+    width: 0px;
+    padding-bottom: 20px;
+    border: none;
+    box-shadow: -3px 0 6px rgba(0, 0, 0, 0.2);
+    /* absoluteは一緒にスクロールする でなければfixd */
+    position: absolute;
+    top: 90px;
+    right: 0;
+    transition: 0.5s;
+    /*溢れたものの表示をどうするか デフォルトvisible表示*/
+    overflow-x: hidden;
+    white-space: nowrap;
+    background-color: #ffffffbf;
+  }
+  .hmenu.close + nav {
+    width: 200px;
+  }
+
+  header div.container {
+    display: block;
+  }
+  header p.logo {
+    margin-left: 25px;
+    display: flex;
+    max-width: 100px;
+  }
+  header div.nav_button {
+    flex-direction: column;
+  }
+  header div.nav_button h1 {
+    display: none;
+  }
+  header div div nav ul {
+    display: block;
+  }
+  header div div nav li.access {
+    display: block;
+  }
+  header div div nav li.img_close {
+    display: block;
+    flex: 5px;
+  }
+  #top p.slid {
+    font-size: 20px;
+  }
+  #topicpath {
+    display: none;
+  }
+  main {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  main article h1 {
+    font-size: 32px;
+  }
+  main article h2 {
+    font-size: 28px;
+  }
+  main article section.one h2 {
+    font-size: 35px;
+  }
+  main footer nav ul {
+    display: none;
+  }
+  footer p.copyright {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  h1.slid {
+    margin: -20% 0 0 0;
+    font-size: 20px;
+  }
+  footer nav h2 {
+    padding: 0 0 5px 0;
+  }
+  footer nav h2 img {
+    max-width: 70%;
+  }
+  footer p.copyright span {
+    display: none;
+  }
+}

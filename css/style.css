@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&family=Meow+Script&family=Patrick+Hand+SC&family=Rock+Salt&family=RocknRoll+One&family=Stick&display=swap");
+/* nekton0719 */
+:root {
+  scroll-behavior: smooth;
+  --font-nekton: "Stick", sans-serif;
+  --font-title: "RocknRoll One", sans-serif;
+  --font-moji: "Rock Salt", cursive;
+}
+/* bodyの書式 */
+body {
+  color: #333;
+  font-size: 18px;
+  font-family: "Yu Gothic Medium", YuGothic, sans-serif;
+  /* ページの背景色 */
+  background-color: rgb(251, 252, 234);
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* リンク文字の書式設定 */
+a {
+  color: inherit;
+  text-decoration: none;
+  /* cssアニメーション　0.5秒かけて変わる */
+  transition: 0.5s;
+}
+.container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* ヘッダー */
+header {
+  font-family: var(--font-nekton);
+  font-size: 29px;
+  background-color: #e8fdda;
+
+  border-bottom: 2px solid #3a71ff;
+}
+
+header div.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header p.logo {
+  flex-basis: 180px;
+}
+header div.migi {
+  flex-basis: 885px;
+}
+header div.acc {
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  color: #fff;
+  width: 260px;
+  margin: 10 auto;
+  padding: 10px;
+}
+header div.acc p {
+  color: #fff;
+  background-color: gold;
+  margin: 10px;
+  padding: 5px 20px;
+}
+header nav {
+  /* background-color: #2f6a75d3; */
+  margin-bottom: 10px;
+  /* padding-bottom: 10px; */
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+header nav li {
+  background-color: #01ebc1;
+  flex: 1;
+  box-shadow: 3px 3px 3px 2px rgba(214, 253, 255, 0.247);
+  padding: 10px;
+  display: block;
+}
+header nav li a {
+  /* background-color: #ff7ee3; */
+  color: azure;
+  text-align: center;
+}
+/* メニューのリンク文字のホバー設定 */
+nav li a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+/* 選択時の書式 */
+nav li a.active {
+  font-weight: bold;
+}
+
+/* メイン */
+main p.cursor {
+  cursor: url();
+}
+main section.hour {
+  background-image: url(../img/top_main3.jpg);
+  background-position: center;
+  max-width: 1160px;
+}
+main section.hour h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: var(--font-title);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+main section.hour dl {
+  background-color: #d7e1fc;
+  display: flex;
+  font-family: var(--font-moji);
+}
+
+main section.nek {
+  background-color: yellowgreen;
+  font-family: var(--font-nekton);
+}
+main section.nek h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-image: image-set();
+}
+/* フッター */
+footer {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+/* ページトップボタン */
+footer p.pagetop {
+  position: fixed;
+  right: 22px;
+  bottom: 20px;
+  display: none;
+}
+
+/* ホバー設定 */
+footer p.pagetop a:hover {
+  opacity: 0.7;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 62px;
+  line-height: 43px;
+  align-items: center;
+  font-size: 16px;
+}
+footer h2 {
+  background-color: #01ebc1;
+  align-items: center;
+}
+
+footer nav ul {
+  flex-wrap: wrap;
+  gap: 9px 2%;
+  display: flex;
+  flex-basis: 475px;
+}
+footer nav li {
+  background-color: rgb(59, 65, 62);
+  flex-basis: 23.5%;
+  /* padding: 3px; */
+  border: 2px solid rgba(227, 231, 240, 0.7);
+}
+
+/* 著作権 */
+footer p.copyright {
+  /* width: 84%;
+  max-width: 980px; */
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: right; */
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  header h1 {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  nav {
+    position: unset;
+  }
+  footer p.copyright {
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  nav li {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer p.copyright span {
+    display: none;
+  }
+}
+/* ［slick.js の導入］矢印の表示位置を変更する */
+.slick-next {
+  right: 15px;
+}
+/* 重なっているので重ね順を指定する */
+.slick-prev {
+  left: 15px;
+  z-index: 1;
+}
+/* 矢印の大きさを変える */
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

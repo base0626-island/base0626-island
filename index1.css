@@ -1,0 +1,50 @@
+@import url(common.css);
+
+/* メイン */
+/* main p.cursor {
+  cursor: default;
+} */
+main section.hour {
+  background-color: rgb(205, 255, 255);
+  max-width: 1160px;
+  text-align: center;
+}
+main section.hour h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: var(--font-title);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+main section.hour li {
+  background-color: #d7e1fc;
+  display: flex;
+  font-family: var(--font-moji);
+}
+
+main section.nekton {
+  background-color: yellowgreen;
+  font-family: var(--font-nekton);
+  background-image: url(../img/nekton_tank.jpg);
+  background-size: 1160px;
+  background-position: center;
+}
+main section.nekton h2 {
+  font-size: 41px;
+  font-weight: bold;
+  color: #fff;
+}
+main section.nekton p.nek {
+  font-size: 30px;
+  text-align: center;
+}
+main section.nekton p {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: rgba(166, 255, 239, 0.8);
+  text-shadow: 2px 2px 2px 2px rgba(14, 181, 151, 0.8);
+  /* line-height: 200.3%; */
+}

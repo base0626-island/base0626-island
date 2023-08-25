@@ -1,0 +1,58 @@
+@import url(common.css);
+
+main article section.one {
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid rgba(1, 235, 193, 0.9);
+  margin-bottom: 20px;
+}
+main article section.one p {
+  /* background-color: blanchedalmond; */
+  text-align: center;
+  font-size: 50px;
+  color: rgba(221, 255, 249, 0.9);
+  text-shadow: 2px 5px 2px rgba(10, 12, 11, 0.8);
+  font-family: M PLUS 1;
+  margin-bottom: 10px;
+}
+main section.one ul {
+  /* background-color: aquamarine; */
+  padding: 10px 50px 10px 50px;
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+ul.two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+li.bnh_area {
+  text-align: center;
+  flex-basis: 31%;
+}
+/* section div.bnh_area:nth-child(4) {
+
+} */
+section div.bnh_area dl {
+  background-color: rgb(253, 217, 246);
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  gap: 15px 2%;
+}
+section div.bnh_area dd {
+  background-color: blanchedalmond;
+  flex-basis: 30%;
+}
+@media (max-width: 767px) {
+  main article section.one p {
+    font-size: 30px;
+  }
+  main article section.one ul {
+    padding: 0 10px 0 10px;
+  }
+}
