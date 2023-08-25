@@ -1,0 +1,42 @@
+@import url(../css/common.css);
+/* section h2 {
+  background-color: blue;
+}
+section.map {
+  background-color: chartreuse;
+} */
+/* --------------------- */
+article {
+  text-align: center;
+  line-height: 2;
+}
+article p img {
+  margin: 30px;
+}
+article p.ji {
+  text-align: left;
+  margin-left: 200px;
+}
+article h2 {
+  font-size: 35px;
+}
+article p img {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  main article section.one p {
+    font-size: 30px;
+  }
+  /* main article section.one ul {
+    padding: 0 10px 0 10px;
+  } */
+}
+@media (max-width: 575px) {
+  ul.event {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
